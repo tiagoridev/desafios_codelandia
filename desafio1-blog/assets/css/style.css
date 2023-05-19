@@ -84,17 +84,17 @@ main{
 .content-details span{
     color: var(--text);
 }
-#icon {
+.icon {
     fill: #574ae801;
-    stroke: #574ae8;
+    stroke: var(--blue-dark);
     stroke-width: 10;
     transition: fill 0.3s;
     cursor: pointer;
   }
   
-  #icon.filled,
-  #icon:hover {
-    fill: #574ae8;
+  .icon.filled,
+  .icon:hover {
+    fill: var(--blue-dark);
   }
   
 
