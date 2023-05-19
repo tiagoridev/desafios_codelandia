@@ -52,14 +52,13 @@ header{
     border: none;
     outline: none;
     font-size: 1.13rem;
-    font-size: var(--font2-secondary);
+    font-family: var(--font2-secondary);
 }
 .input-group input::placeholder{
     color: var(--white);
 }
 
 /**********FIM HEADER*********/
-
 /********INICIO MAIN*********/
 main{
     padding: 6.25rem 1.25rem;
@@ -94,8 +93,38 @@ main{
     font-weight: normal;
     color: var(--title);
     margin-bottom: .5rem;
+    
 }
 .content-text p{
     font-size: 1.13rem;
     color: var(--text);
+    line-height: 2rem;
+}
+
+/***RESPONSIVO****/
+@media (max-width: 500px) {
+    main{
+        padding: 3.13rem 1.25rem;
+    }
+    .content-group{        
+        padding: 1rem;        
+    }
+    .container-menu{
+        padding: 3rem 0 2.5rem 0 ;
+    }
+    .input-group{
+        height: 2.5rem;
+    }
+    .input-group input, 
+    .content-details span, 
+    .content-text p {
+        font-size: .88rem;
+    }    
+    .content-text h1{
+        font-size: 1.13rem;
+    }   
+    .content-text p{
+        line-height: 1.63rem;
+        width: 345px;
+    }
 }
