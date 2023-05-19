@@ -9,43 +9,93 @@
     --blue-dark: #574AE8;
     --white: #FFF;  
     --title: #313131;
-    --text: #B6B6B6;    
+    --text: #979797;    
     --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+    --font-primary: 'Lexend Deca', sans-serif;
+    --font2-secondary: 'Inter', sans-serif;
   }
+body{
+    background-color: #F3F5F7;
+    font-family: var(--font-primary);
+}
+
 header{
     background-image: var(--linear);
-    padding: 0 20px 40px 20px;
+    padding: 0 1.25rem 2.5rem 1.25rem;
 }
 .container{
-    max-width: 900px;
+    max-width: 56.25rem;
     margin: 0 auto;
 } 
 .container-menu{
     display: flex;
     justify-content: space-between;
-    padding: 40px 0 70px 0 ;
+    padding: 2.5rem 0 4.38rem 0 ;
 }
 .input-group{
     width: 100%;
-    height: 65px;
+    height: 4.05rem;
     background-color: rgba(255, 255, 255, 0.2);    
     outline: none;
     border: none;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 20px;    
+    gap: 1.25rem;    
 }
 .input-group-icon{
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 .input-group input{
     background-color: transparent;
     width: inherit;
     border: none;
     outline: none;
-    font-size: 18px;
+    font-size: 1.13rem;
+    font-size: var(--font2-secondary);
 }
 .input-group input::placeholder{
     color: var(--white);
+}
+
+/**********FIM HEADER*********/
+
+/********INICIO MAIN*********/
+main{
+    padding: 6.25rem 1.25rem;
+}
+.container-main{
+    display: flex;
+    flex-direction: column;
+    gap: 3.13rem;
+}
+.content-group{
+    background-color: var(--white);
+    height: auto;
+    padding: 1.56rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
+}
+.main-btn{
+    border: none;
+    background-color: transparent;
+}
+.content-details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.38rem;
+    
+}
+.content-details span{
+    color: var(--text);
+}
+.content-text h1{
+    font-size: 1.63rem;
+    font-weight: normal;
+    color: var(--title);
+    margin-bottom: .5rem;
+}
+.content-text p{
+    font-size: 1.13rem;
+    color: var(--text);
 }
