@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;    
 }
-
 :root {
     --blue: #3EA1DB;
     --blue-dark: #574AE8;
@@ -13,12 +12,11 @@
     --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
     --font-primary: 'Lexend Deca', sans-serif;
     --font2-secondary: 'Inter', sans-serif;
-  }
+}
 body{
     background-color: #F3F5F7;
     font-family: var(--font-primary);
 }
-
 header{
     background-image: var(--linear);
     padding: 0 1.25rem 2.5rem 1.25rem;
@@ -57,7 +55,6 @@ header{
 .input-group input::placeholder{
     color: var(--white);
 }
-
 /**********FIM HEADER*********/
 /********INICIO MAIN*********/
 main{
@@ -82,25 +79,36 @@ main{
 .content-details{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.38rem;
-    
+    margin-bottom: 1.38rem;    
 }
 .content-details span{
     color: var(--text);
 }
+#icon {
+    fill: #574ae801;
+    stroke: #574ae8;
+    stroke-width: 10;
+    transition: fill 0.3s;
+    cursor: pointer;
+  }
+  
+  #icon.filled,
+  #icon:hover {
+    fill: #574ae8;
+  }
+  
+
 .content-text h1{
     font-size: 1.63rem;
     font-weight: normal;
     color: var(--title);
     margin-bottom: .5rem;
-    
 }
 .content-text p{
     font-size: 1.13rem;
     color: var(--text);
     line-height: 2rem;
 }
-
 /***RESPONSIVO****/
 @media (max-width: 500px) {
     main{
@@ -125,6 +133,5 @@ main{
     }   
     .content-text p{
         line-height: 1.63rem;
-        width: 345px;
     }
 }
