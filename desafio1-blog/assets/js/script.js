@@ -11,30 +11,24 @@ favoritos.forEach((favorito) => {
 })
 
 async function addPost(){
-    // let contentGroup = document.querySelector('.content-text');
-		// let secao = document.querySelector('section')
-		let container = document.querySelector('.container-main')
-		
-		
-
+    let container = document.querySelector('.container-main')
+		container.innerHTML = 'Carregando...'
     try{
 			const response = await fetch(url)
-			const responseJson = await response.json();			
-			
+			const responseJson = await response.json();		
 			
 			if(responseJson.articles.length > 0){
 				container.innerHTML = ''
 				// contentGroup.style.display = 'none'
-				// main.innerHTML = 'Carregando...'
+				
 				for(let indice in responseJson.articles){
 					//cria a seção pai
 					const section = document.createElement('section');
 					section.classList.add('content-group');
 					section.setAttribute('tabindex', '0');
-
+					//cria DIV CONTENT DETAILS
 					const divContentDetails = document.createElement('div');
-					divContentDetails.classList.add('content-details');
-					
+					divContentDetails.classList.add('content-details');					
 					//Span vai exibir a data do post					
 					const dateAPI = responseJson.articles[indice].publishedAt;
 					const date = new Date(dateAPI);
@@ -44,12 +38,8 @@ async function addPost(){
 					const year = date.getFullYear();
 					const dateFormated = `${day < 10 ? '0' + day : day} de ${month}, ${year}`;
 					const dateSpan = document.createElement('span');
-					dateSpan.innerText = dateFormated;
-					
-					console.log(dateFormated);	
-					divContentDetails.appendChild(dateSpan)
-					
-					
+					dateSpan.innerText = dateFormated;				
+					divContentDetails.appendChild(dateSpan)					
 					//Cria o icone de favorito // REVISAR PARA APARECER ICONE NA TELA.
 					const iconFavorite = document.createElement('svg');
 					iconFavorite.classList.add('icon');
@@ -61,49 +51,36 @@ async function addPost(){
 					iconFavorite.setAttribute('alt', 'Icone para favoritar');
 					iconFavorite.style.backgroundColor = 'green'
 					divContentDetails.appendChild(iconFavorite)
-
-					
-
 					//Cria o vetor svg
 					const path = document.createElement('path');
 					path.setAttribute('d', pathD);
 					iconFavorite.appendChild(path)
-					// console.log(path)
-
+					//add itens filho no pai
 					section.appendChild(divContentDetails)
-					/*finaliza DIV CONTENT DETAILS*/
-					/*inicia DIV CONTENT TEXT*/
-
-					/*cria DIV CONTENT TEXT*/
+					/*********finaliza DIV CONTENT DETAILS**********/
+					/**********inicia DIV CONTENT TEXT**************/
 					const divContentText = document.createElement('div');
-					divContentText.classList.add('content-text');					
-					
+					divContentText.classList.add('content-text');
 					/*cria o title text*/
 					const titleText = document.createElement('h2');
 					titleText.innerText = responseJson.articles[indice].title;
 					titleText.classList.add('title-text');
 					divContentText.appendChild(titleText);
-
 					/*cria o texto*/
 					const text = document.createElement('p');
 					text.innerText = responseJson.articles[indice].content;
+					text.classList.add('text');
 					divContentText.appendChild(text);
-
+					// add itens filho ao pai
 					section.appendChild(divContentText)
 					/*FINALIZA DIV CONTENT TEXT*/
-					container.appendChild(section);									
-					
-					
+					container.appendChild(section);
 				}
 			} else {
 				container.innerHTML = 'SEM POST PARA EXIBIR'
 			}
-
     } catch (error) {
 			container.innerHTML = 'ERRO DE REQUISIÇÃO DA API'
-		}
-		
+		}		
 }
 addPost()
-
-// publishedAt = data do post
