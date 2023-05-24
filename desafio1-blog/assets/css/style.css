@@ -92,12 +92,10 @@ main{
     cursor: pointer;
   }
   
-  .icon.filled,
-  .icon:hover {
+.icon.filled,
+.icon:hover {
     fill: var(--blue-dark);
   }
-  
-
 .title-text{
     font-size: 1.63rem;
     font-weight: normal;
