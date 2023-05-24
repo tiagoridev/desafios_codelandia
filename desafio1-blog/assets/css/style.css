@@ -98,13 +98,13 @@ main{
   }
   
 
-.content-text h1{
+.title-text{
     font-size: 1.63rem;
     font-weight: normal;
     color: var(--title);
     margin-bottom: .5rem;
 }
-.content-text p{
+.text{
     font-size: 1.13rem;
     color: var(--text);
     line-height: 2rem;
