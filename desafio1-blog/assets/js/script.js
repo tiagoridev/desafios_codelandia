@@ -10,8 +10,7 @@ async function addPost(){
 			
 			if(responseJson.articles.length > 0){
 				container.innerHTML = ''
-				// contentGroup.style.display = 'none'
-				
+				// contentGroup.style.display = 'none'				
 				for(let indice in responseJson.articles){
 					//cria a seção pai
 					const section = document.createElement('section');
@@ -69,7 +68,6 @@ async function addPost(){
 					//add DIV CONTENT-TEXT ao link das noticias
 					link.appendChild(divContentText)					
 					section.appendChild(link)					
-					
 					/*FINALIZA DIV CONTENT TEXT*/
 					container.appendChild(section);					
 				}
@@ -78,15 +76,17 @@ async function addPost(){
 			}
     } catch (error) {
 			container.innerHTML = 'ERRO DE REQUISIÇÃO DA API'
-		}		
+		}
+		//ativa o favoritar de cada post.
+		favorites()
 }
 addPost()
-
-/**Favorita os icones**/
+	
+function favorites(){
 const favoritos = [...document.querySelectorAll('.icon')]
 favoritos.forEach((favorito) => {
 	favorito.addEventListener('click', () => {
 			favorito.classList.toggle('filled')
 	})
 })
-
+}
