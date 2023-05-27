@@ -80,8 +80,12 @@ async function addPost(){
 		//ativa o favoritar de cada post.
 		favorites()
 }
-addPost()
-	
+addPost()	
+
+const inputFilter = document.querySelector('.input');
+const box = document.querySelector('.content-text h2');
+console.log(box)
+
 function favorites(){
 const favoritos = [...document.querySelectorAll('.icon')]
 favoritos.forEach((favorito) => {
@@ -90,3 +94,10 @@ favoritos.forEach((favorito) => {
 	})
 })
 }
+
+
+function filterNews(){
+	console.log(inputFilter.value)
+ //PAREI AQUI...CRIAR FUNÇÃO.
+}
+inputFilter.addEventListener('input', filterNews)
