@@ -55,7 +55,7 @@ async function addPost(){
 					const titleText = document.createElement('h2');
 					titleText.innerText = responseJson.articles[indice].title;
 					titleText.classList.add('title-text');
-					divContentText.appendChild(titleText);
+					divContentText.appendChild(titleText);			
 					/*cria o texto*/
 					const text = document.createElement('p');
 					text.innerText = responseJson.articles[indice].content;
@@ -69,8 +69,36 @@ async function addPost(){
 					link.appendChild(divContentText)					
 					section.appendChild(link)					
 					/*FINALIZA DIV CONTENT TEXT*/
-					container.appendChild(section);					
+					container.appendChild(section);	
+
+					
+					// function filter(){
+						
+					// }
+					
+					
 				}
+				// const inputFilter = document.querySelector('.input');
+				// 	function filterNews(){
+				// 	if(inputFilter.value === 'tiago'){
+				// 		inputFilter.style.backgroundColor = 'pink'						
+				// 	} else {
+				// 		console.log('É DIFERENTE')
+				// 		inputFilter.style.backgroundColor = ''
+				// 	}	
+				// }
+				// inputFilter.addEventListener('input', filterNews)
+
+				const inputFilter = document.querySelector('.input').value
+				const newsGroup = [...document.querySelectorAll('.content-group')]
+				console.log(newsGroup)
+
+				function filterNews(){
+					console.log(titleText)
+				}
+				inputFilter.addEventListener('input', filterNews)
+				
+
 			} else {
 				container.innerHTML = 'SEM POST PARA EXIBIR'
 			}
@@ -79,12 +107,14 @@ async function addPost(){
 		}
 		//ativa o favoritar de cada post.
 		favorites()
+		//ativa o filtro
+		
 }
 addPost()	
 
-const inputFilter = document.querySelector('.input');
-const box = document.querySelector('.content-text h2');
-console.log(box)
+
+// const box = document.querySelector('.content-text h2');
+// console.log(box)
 
 function favorites(){
 const favoritos = [...document.querySelectorAll('.icon')]
@@ -95,9 +125,13 @@ favoritos.forEach((favorito) => {
 })
 }
 
-
+const inputFilter = document.querySelector('.input');
 function filterNews(){
-	console.log(inputFilter.value)
- //PAREI AQUI...CRIAR FUNÇÃO.
+	if(inputFilter.value !== titleText){
+		inputFilter.style.backgroundColor = 'pink'	
+	} else {
+		console.log('É DIFERENTE')
+		inputFilter.style.backgroundColor = ''
+	}	
 }
-inputFilter.addEventListener('input', filterNews)
+// inputFilter.addEventListener('input', filterNews)
