@@ -6,31 +6,29 @@ async function addPost(){
 		container.innerHTML = 'Carregando...'
     try{
 			const response = await fetch(url)
-			const responseJson = await response.json();		
+			const responseJson = await response.json();
 			
 			if(responseJson.articles.length > 0){
 				container.innerHTML = ''
-				// contentGroup.style.display = 'none'				
-				for(let indice in responseJson.articles){
-					//cria a seção pai
+
+				for(let indice in responseJson.articles){					
 					const section = document.createElement('section');
 					section.classList.add('content-group');
-					section.setAttribute('tabindex', '0');
-					//cria DIV CONTENT DETAILS
+					section.setAttribute('tabindex', '0');					
 					const divContentDetails = document.createElement('div');
-					divContentDetails.classList.add('content-details');					
-					//Span vai exibir a data do post					
+					divContentDetails.classList.add('content-details');
 					const dateAPI = responseJson.articles[indice].publishedAt;
 					const date = new Date(dateAPI);
+					//pega data da API
 					const day = date.getDate();
 					const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
 					const month = months[date.getMonth()];
 					const year = date.getFullYear();
 					const dateFormated = `${day < 10 ? '0' + day : day} de ${month}, ${year}`;
-					const dateSpan = document.createElement('span');
-					dateSpan.innerText = dateFormated;				
-					divContentDetails.appendChild(dateSpan)					
-					//Cria o icone de favorito // REVISAR PARA APARECER ICONE NA TELA.
+					const dateTime = document.createElement('time');
+					dateTime.innerText = dateFormated;				
+					divContentDetails.appendChild(dateTime)
+					//cria icone	
 					const ns = 'http://www.w3.org/2000/svg'
 					const iconFavorite = document.createElementNS(ns,'svg');
 					iconFavorite.classList.add('icon');
@@ -44,46 +42,39 @@ async function addPost(){
 					//Cria o vetor svg
 					const path = document.createElementNS(ns,'path');
 					path.setAttribute('d', pathD);
-					iconFavorite.appendChild(path)
-					//add itens filho no pai
-					section.appendChild(divContentDetails)
-					/*********finaliza DIV CONTENT DETAILS**********/
-					/**********inicia DIV CONTENT TEXT**************/
+					iconFavorite.appendChild(path)					
+					section.appendChild(divContentDetails)					
+				
 					const divContentText = document.createElement('div');
 					divContentText.classList.add('content-text');
-					/*cria o title text*/
+					
 					const titleText = document.createElement('h2');
 					titleText.innerText = responseJson.articles[indice].title;
 					titleText.classList.add('title-text');
 					divContentText.appendChild(titleText);
-					/*cria o texto*/
+					
 					const text = document.createElement('p');
 					text.innerText = responseJson.articles[indice].content;
 					text.classList.add('text');
 					divContentText.appendChild(text);
-					//cria link externo das noticias
+					
 					const link = document.createElement('a');
 					link.setAttribute('href', responseJson.articles[indice].url)
 					link.setAttribute('target', '_blank');					
-					//add DIV CONTENT-TEXT ao link das noticias
+				
 					link.appendChild(divContentText)					
-					section.appendChild(link)					
-					/*FINALIZA DIV CONTENT TEXT*/
-					container.appendChild(section);				
+					section.appendChild(link)				
+					container.appendChild(section);
 				}	
 			} else {
 				container.innerHTML = 'SEM POST PARA EXIBIR'
 			}
     } catch (error) {
 			container.innerHTML = 'ERRO DE REQUISIÇÃO DA API'
-		}
-		//ativa o favoritar de cada post.
-		favorites()
-		
+		}	
+		favorites()		
 }
 addPost()	
-// const box = document.querySelector('.content-text h2');
-// console.log(box)
 
 function favorites(){
 const favoritos = [...document.querySelectorAll('.icon')]
@@ -95,40 +86,21 @@ favoritos.forEach((favorito) => {
 }
 
 const inputFilter = document.querySelector('.input');
-
-
-
 inputFilter.addEventListener('input', filterNews)
-
-
 function filterNews(){
 	const sections =[...document.querySelectorAll("section")];
-	if(inputFilter.value !== ''){		
-	// Agora você pode percorrer todas as sections
-		for (let section of sections) {
-		// Faça algo com cada section aqui
+	if(inputFilter.value !== ''){	
+		for (let section of sections) {		
 		let titleNews = section.querySelector('h2');
-		titleNews = titleNews.textContent.toLowerCase();
-		// console.log(titleNews)
-		
+		titleNews = titleNews.textContent.toLowerCase();		
 		let textNews = section.querySelector('p')
-		textNews = textNews.textContent.toLowerCase();
-		// console.log(textNews)
-		
-		//Transforma o valor do input em minusculo
+		textNews = textNews.textContent.toLowerCase();		
 		let inputLowerCase = inputFilter.value.toLowerCase();
-		// console.log(inputLowerCase)
-
 			if(titleNews.includes(inputLowerCase) || textNews.includes(inputLowerCase)){
 				section.style.display = 'block';
 			} else {
 				section.style.display = 'none';
 			}		
 		};		
-	} 
-	tolo
+	}	
 }
-
-
-
-

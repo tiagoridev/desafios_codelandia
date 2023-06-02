@@ -88,7 +88,7 @@ main{
     justify-content: space-between;
     margin-bottom: 1.38rem;    
 }
-.content-details span{
+.content-details time{
     color: var(--text);
 }
 .icon {
