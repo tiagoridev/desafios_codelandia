@@ -55,7 +55,7 @@ async function addPost(){
 					const titleText = document.createElement('h2');
 					titleText.innerText = responseJson.articles[indice].title;
 					titleText.classList.add('title-text');
-					divContentText.appendChild(titleText);			
+					divContentText.appendChild(titleText);
 					/*cria o texto*/
 					const text = document.createElement('p');
 					text.innerText = responseJson.articles[indice].content;
@@ -69,36 +69,8 @@ async function addPost(){
 					link.appendChild(divContentText)					
 					section.appendChild(link)					
 					/*FINALIZA DIV CONTENT TEXT*/
-					container.appendChild(section);	
-
-					
-					// function filter(){
-						
-					// }
-					
-					
-				}
-				// const inputFilter = document.querySelector('.input');
-				// 	function filterNews(){
-				// 	if(inputFilter.value === 'tiago'){
-				// 		inputFilter.style.backgroundColor = 'pink'						
-				// 	} else {
-				// 		console.log('É DIFERENTE')
-				// 		inputFilter.style.backgroundColor = ''
-				// 	}	
-				// }
-				// inputFilter.addEventListener('input', filterNews)
-
-				const inputFilter = document.querySelector('.input').value
-				const newsGroup = [...document.querySelectorAll('.content-group')]
-				console.log(newsGroup)
-
-				function filterNews(){
-					console.log(titleText)
-				}
-				inputFilter.addEventListener('input', filterNews)
-				
-
+					container.appendChild(section);				
+				}	
 			} else {
 				container.innerHTML = 'SEM POST PARA EXIBIR'
 			}
@@ -107,12 +79,9 @@ async function addPost(){
 		}
 		//ativa o favoritar de cada post.
 		favorites()
-		//ativa o filtro
 		
 }
 addPost()	
-
-
 // const box = document.querySelector('.content-text h2');
 // console.log(box)
 
@@ -126,12 +95,40 @@ favoritos.forEach((favorito) => {
 }
 
 const inputFilter = document.querySelector('.input');
+
+
+
+inputFilter.addEventListener('input', filterNews)
+
+
 function filterNews(){
-	if(inputFilter.value !== titleText){
-		inputFilter.style.backgroundColor = 'pink'	
-	} else {
-		console.log('É DIFERENTE')
-		inputFilter.style.backgroundColor = ''
-	}	
+	const sections =[...document.querySelectorAll("section")];
+	if(inputFilter.value !== ''){		
+	// Agora você pode percorrer todas as sections
+		for (let section of sections) {
+		// Faça algo com cada section aqui
+		let titleNews = section.querySelector('h2');
+		titleNews = titleNews.textContent.toLowerCase();
+		// console.log(titleNews)
+		
+		let textNews = section.querySelector('p')
+		textNews = textNews.textContent.toLowerCase();
+		// console.log(textNews)
+		
+		//Transforma o valor do input em minusculo
+		let inputLowerCase = inputFilter.value.toLowerCase();
+		// console.log(inputLowerCase)
+
+			if(titleNews.includes(inputLowerCase) || textNews.includes(inputLowerCase)){
+				section.style.display = 'block';
+			} else {
+				section.style.display = 'none';
+			}		
+		};		
+	} 
+	tolo
 }
-// inputFilter.addEventListener('input', filterNews)
+
+
+
+
