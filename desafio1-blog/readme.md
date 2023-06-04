@@ -6,8 +6,10 @@ A proposta inicial deste desafio era replicar o layout de uma página de notíci
 
 Para aperfeiçoar meus conhecimentos, optei em realizar a inclusão das features abaixo:
 *  Efeito hover em cada bloco de notícias;
+*  Data personalizada, de acordo com a notícia;
 *  Notícias atualizadas atráves do consumo de API;
-*  Opção de filtrar as notícias de acordo com as palavras do título (em desenvolvimento).
+*  Opção de filtrar as notícias de acordo com as palavras do título e texto;
+
 
 ## Tecnologias utilizadas
 

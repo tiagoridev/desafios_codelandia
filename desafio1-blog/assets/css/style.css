@@ -4,19 +4,20 @@
     box-sizing: border-box;    
 }
 :root {
-    --body: #F3F5F7;
-    --blue: #3EA1DB;
-    --blue-dark: #574AE8;
-    --white: #FFF;  
+    --background: #F3F5F7;    
+    --iconFavorite: #574AE8;
+    --newsSection: #FFF;  
     --title: #313131;
     --text: #979797;    
-    --linear: linear-gradient(90deg, #27235C 0%, #0C557A 100%);
+    --linear: linear-gradient(88.27deg, #574AE8 0%, #3EA1DB 100%);
     --font-primary: 'Lexend Deca', sans-serif;
     --font2-secondary: 'Inter', sans-serif;
 }
 body{
-    background-color: var(--body);
+    background-color: var(--background);
     font-family: var(--font-primary);
+    /* width: 100vw; */
+    overflow-x: hidden;
 }
 header{
     background-image: var(--linear);
@@ -70,7 +71,7 @@ main{
     gap: 3.13rem;
 }
 .content-group{
-    background-color: var(--white);
+    background-color: var(--newsSection);
     height: auto;
     padding: 1.56rem;
     border-radius: 5px;
@@ -94,14 +95,14 @@ main{
 }
 .icon {
     fill: #574ae801;
-    stroke: var(--blue-dark);
+    stroke: var(--iconFavorite);
     stroke-width: 10;
     transition: fill 0.3s;
     cursor: pointer;
   }  
 .icon.filled,
 .icon:hover {
-    fill: var(--blue-dark);
+    fill: var(--iconFavorite);
   }
 .title-text{
     font-size: 1.63rem;
@@ -114,28 +115,26 @@ main{
     color: var(--text);
     line-height: 2rem;
 }
-
-
-
 @media(prefers-color-scheme: dark){
     :root{
-        --body: #181717;
-        --blue: #3EA1DB;
-        --blue-dark: #43C1B2;
-        --white: #303030;  
+        --background: #181717;        
+        --iconFavorite: #43C1B2;
+        --newsSection: #303030;  
         --title: #7ABDFF;
         --text: #ABA6A6;    
         --linear: linear-gradient(90deg, #27235C 0%, #0C557A 100%);
     }
 }
-
-/***RESPONSIVO****/
 @media (max-width: 500px) {
     main{
         padding: 3.13rem 1.25rem;
     }
     .content-group{        
         padding: 1rem;
+    }
+    .content-group:hover{
+        scale: 1.1;
+        box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.30);
     }
     .container-menu{
         padding: 3rem 0 2.5rem 0 ;
