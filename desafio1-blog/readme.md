@@ -10,6 +10,7 @@ Para aperfeiçoar meus conhecimentos, optei em realizar a inclusão das features
 *  Data personalizada, de acordo com a publicação da notícia;
 *  Opção de filtrar as notícias de acordo com as palavras inclusas no título e texto  de cada post;
 *  Efeito dark e light mode.
+*  Tema da página exibido de acordo com a preferência do sistema do usuário.
 
 
 ## Tecnologias utilizadas
