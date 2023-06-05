@@ -37,7 +37,7 @@ async function addPost(){
 					iconFavorite.setAttribute('viewBox', '0 0 200 200');
 					iconFavorite.setAttribute('fill', 'none');
 					iconFavorite.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-					iconFavorite.setAttribute('alt', 'Icone para favoritar');					
+					iconFavorite.setAttribute('alt', 'Icone para favoritar');							
 					divContentDetails.appendChild(iconFavorite)
 					//Cria o vetor svg
 					const path = document.createElementNS(ns,'path');
@@ -79,7 +79,7 @@ addPost()
 function favorites(){
 const favoritos = [...document.querySelectorAll('.icon')]
 favoritos.forEach((favorito) => {
-	favorito.addEventListener('click', () => {
+	favorito.addEventListener('click', () => {		
 			favorito.classList.toggle('filled')
 	})
 })
