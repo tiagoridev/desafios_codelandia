@@ -60,7 +60,17 @@ a{
 .icon-theme img{
     width: 26px;
     height: 26px;
+    cursor: pointer;
+    transition: .2s;
+    
 }
+.icon-theme img:hover{
+    scale: 1.2;    
+}
+/* .i-light{
+    display: none;
+} */
+
 .input-group-icon{
     margin-left: 1.25rem;
 }
@@ -134,6 +144,12 @@ input[type="checkbox"]{
     display: none;
 }
 /*Dark theme*/
+.i-light, .dark .i-dark{
+    display: none;
+}
+.dark .i-light {
+    display: block;
+}
 .dark{
     background-color: #181717;
 }

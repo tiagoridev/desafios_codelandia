@@ -104,21 +104,21 @@ function filterNews(){
 		};		
 	}	
 }
-const changeTheme = document.querySelector('#change-theme');
-
-
-
-changeTheme.addEventListener('change', function() {
-	const iconDark = document.querySelector('.i-dark');
-	const iconLight = document.querySelector('.i-light');
-	const body = document.querySelector('body')
-	body.classList.toggle('dark')
-	if(body.classList.contains('dark')){
-		iconDark.style.display = 'none'
-		iconLight.style.display = 'block'
+const prefersMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const body = document.querySelector('body')
+function userTheme() {
+	if(prefersMode){
+		body.classList.add('dark');
 	} else {
-		iconDark.style.display = 'block'
-		iconLight.style.display = 'none'
+		body.classList.remove('dark');
 	}
+}
+userTheme()
 
-})
+const changeTheme = document.querySelector('#change-theme');
+function theme(){
+	const iconDark = document.querySelector('.i-dark');
+	const iconLight = document.querySelector('.i-light');	
+	body.classList.toggle('dark')
+}
+changeTheme.addEventListener('change', theme)
