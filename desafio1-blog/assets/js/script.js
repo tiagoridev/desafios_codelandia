@@ -104,3 +104,21 @@ function filterNews(){
 		};		
 	}	
 }
+const changeTheme = document.querySelector('#change-theme');
+
+
+
+changeTheme.addEventListener('change', function() {
+	const iconDark = document.querySelector('.i-dark');
+	const iconLight = document.querySelector('.i-light');
+	const body = document.querySelector('body')
+	body.classList.toggle('dark')
+	if(body.classList.contains('dark')){
+		iconDark.style.display = 'none'
+		iconLight.style.display = 'block'
+	} else {
+		iconDark.style.display = 'block'
+		iconLight.style.display = 'none'
+	}
+
+})
