@@ -4,7 +4,13 @@
 
 A proposta inicial deste desafio era replicar o layout de uma página de notícias, colocando os artigos de cada notícia através do HTML e sendo possível favoritar cada bloco de notícias, além de ser responsivo. 
 
-Para aperfeiçoar meus conhecimentos, optei em realizar a inclusão das features abaixo:
+## Principais hard skills utilizadas: 
+* HTML semântico;
+* Consumo de API; 
+* Manipulação de elementos DOM;
+* Utilização de Javascript puro.
+
+## Features incluídas:
 *  Efeito hover em cada bloco de notícias;
 *  Notícias atualizadas atráves do consumo de API;
 *  Data personalizada, de acordo com a publicação da notícia;
