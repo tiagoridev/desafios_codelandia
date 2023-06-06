@@ -6,7 +6,6 @@ A proposta inicial deste desafio era replicar o layout de uma página de notíci
 
 Para aperfeiçoar meus conhecimentos, optei em realizar a inclusão das features abaixo:
 *  Efeito hover em cada bloco de notícias;
-*  Marcar notícia como favorita;
 *  Notícias atualizadas atráves do consumo de API;
 *  Data personalizada, de acordo com a publicação da notícia;
 *  Opção de filtrar as notícias de acordo com as palavras inclusas no título e texto  de cada post;
@@ -16,7 +15,7 @@ Para aperfeiçoar meus conhecimentos, optei em realizar a inclusão das features
 
 ## Tecnologias utilizadas
 
-<div style="display: flex;">
+<div style="display: flex; gap: 5px">
   <img align="center" alt="Html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
   <img align="center" alt="css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
   <img align="center" alt="javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
@@ -26,7 +25,8 @@ Para aperfeiçoar meus conhecimentos, optei em realizar a inclusão das features
 </div>
 
 ## Links importantes
-Projeto: Em conclusão. </br>
-Linkedin: https://www.linkedin.com/in/tiagoribeirotech/
+Deploy: [Codelândia | News (Veja o projeto ao vivo)](https://647e941d8817b449bf78058c--sparkling-madeleine-51c34d.netlify.app/) </br>
+Linkedin: [Tiago Ribeiro](https://www.linkedin.com/in/tiagoribeirotech/) </br>
+Discord: [Codelândia](https://discord.gg/kZU7B3Xs)
 
  
