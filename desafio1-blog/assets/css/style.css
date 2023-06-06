@@ -98,7 +98,6 @@ main{
     flex-direction: column;
     gap: 3.13rem;
 }
-
 .content-group{
     background-color: var(--newsSection);
     height: auto;

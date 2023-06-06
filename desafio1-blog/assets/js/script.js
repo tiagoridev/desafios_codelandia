@@ -73,7 +73,7 @@ async function addPost(){
     } catch (error) {
 			container.innerHTML = 'ERRO DE REQUISIÇÃO DA API'
 		}	
-		favorites()		
+		favorites()
 }
 addPost()	
 
