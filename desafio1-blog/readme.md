@@ -4,13 +4,13 @@
 
 A proposta inicial deste desafio da [Codelândia](https://discord.gg/kZU7B3Xs) era replicar o layout de uma página de notícias, colocando os artigos de cada notícia através do HTML e sendo possível favoritar cada bloco de notícias, além de ser responsivo. 
 
-## Principais hard skills utilizadas: 
+## Principais hard skills desenvolvidas: 
 * HTML semântico;
 * Consumo de API; 
 * Manipulação de elementos DOM;
 * Utilização de Javascript puro.
 
-## Features adcionadas por mim ao projeto:
+## Features que adicionei:
 *  Efeito hover em cada bloco de notícias;
 *  Notícias atualizadas atráves do consumo de API;
 *  Data personalizada, de acordo com a publicação da notícia;
@@ -19,7 +19,7 @@ A proposta inicial deste desafio da [Codelândia](https://discord.gg/kZU7B3Xs) e
 *  Reconhecimento e ativação de preferência do sistema do usuário.
 
 
-## Tecnologias utilizadas
+## Tecnologias que utilizei:
 
 <div style="display: flex; gap: 5px">
   <img align="center" alt="Html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
