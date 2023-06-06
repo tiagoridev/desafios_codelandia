@@ -18,8 +18,7 @@ async function addPost(){
 					const divContentDetails = document.createElement('div');
 					divContentDetails.classList.add('content-details');
 					const dateAPI = responseJson.results[indice].published_at;
-					const date = new Date(dateAPI);
-					//pega data da API
+					const date = new Date(dateAPI);					
 					const day = date.getDate();
 					const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
 					const month = months[date.getMonth()];

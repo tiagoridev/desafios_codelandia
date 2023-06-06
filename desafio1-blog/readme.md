@@ -1,6 +1,6 @@
 # PÁGINA DE NOTÍCIAS
 
-![Print do projeto](assets/imgs/design/home.png)
+![Print do projeto](assets/imgs/design/design.png)
 
 A proposta inicial deste desafio da [Codelândia](https://discord.gg/kZU7B3Xs) era replicar o layout de uma página de notícias, colocando os artigos de cada notícia através do HTML e sendo possível favoritar cada bloco de notícias, além de ser responsivo. 
 
