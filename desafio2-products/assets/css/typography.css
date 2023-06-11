@@ -1,0 +1,22 @@
+:root{
+  --font: 'Montserrat', sans-serif;
+}
+body{
+  font-family: var(--font);
+}
+.xl-text{
+  font-size: 48px;
+  font-weight: 600;
+}
+.lg-text{
+  font-size: 32px;
+  font-weight: 600;
+}
+.md-text{
+  font-size: 24px;
+  font-weight: 500;
+}
+.sm-text{
+  font-size: 18px;
+  font-weight: 500;
+}

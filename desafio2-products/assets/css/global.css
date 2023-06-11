@@ -1,0 +1,10 @@
+.container{
+  max-width: 1720px;
+  margin: 0 auto;
+}
+.text-center{
+  text-align: center;
+}
+.padx-20{
+  padding: 20px 0;
+}
