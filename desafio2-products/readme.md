@@ -1,6 +1,6 @@
 # Grade de produtos
 
-![Print do projeto](./assets/imgs/design/design.jpg)
+![Print do projeto](../desafio2-products/assets/imgs/design/design.JPG)
 
 O foco deste pequeno projeto é a pratica de CSS utilitário, com estruturação,  reaproveitamento e separação de classes. Similar ao Bootstrap, CSS utilitário, permite uma fácil manutenção do código e também fácil compreensão de terceiros ao código, utilizando classes.
 
