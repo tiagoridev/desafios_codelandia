@@ -1,0 +1,29 @@
+.main-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 4.38rem 0;
+}
+
+.pad-item{
+  padding: 4.75rem 5.38rem;
+  background-color: var(--cor-3);
+}
+
+.list-products{
+  display: flex;
+  flex-wrap: wrap;      
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+main{
+  padding: 0 20px; 
+  margin: 1.25rem; 
+}
+
+@media (max-width: 500px){
+  .pad-item{
+    padding: 4.13rem 3.5rem;    
+  } 
+}
