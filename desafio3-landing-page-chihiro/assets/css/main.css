@@ -1,0 +1,20 @@
+.main-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.main-span{
+  letter-spacing: .1rem;
+}
+
+.main-title{
+  line-height: 4.69rem;
+  margin-bottom: 3.13rem;
+}
+
+.main-text{
+  line-height: 1.75rem; 
+  margin-bottom: 3.75rem;
+  letter-spacing: .05em;
+}

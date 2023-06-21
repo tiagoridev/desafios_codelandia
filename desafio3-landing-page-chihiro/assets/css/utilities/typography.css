@@ -1,0 +1,41 @@
+:root{
+  --font-txt: 'Poppins', sans-serif; 
+}
+
+.font-family{
+  font-family: var(--font-txt);
+}
+
+/* size */
+.txt-lg{
+  font-size: 4.25rem;  
+}
+
+.txt-md{
+  font-size: 1.25rem;
+}
+
+.txt-sm{
+  font-size: 1rem;
+}
+
+
+/* weight */
+.font-black{
+  font-weight: 900;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-regular{
+  font-weight: 400;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+
+
