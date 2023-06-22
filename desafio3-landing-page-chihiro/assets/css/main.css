@@ -3,12 +3,14 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 3.25rem;
   overflow-x: hidden;
+  
 }
 
 .main-content{
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+  max-width: 100%;  
 }
 
 .main-span{
@@ -24,6 +26,7 @@
   line-height: 1.75rem; 
   margin-bottom: 3.75rem;
   letter-spacing: .05em;
+  max-width: 45ch;
 }
 .main-btns{
   display: flex;
@@ -58,9 +61,41 @@
   border: 2px solid var(--cor-1); 
 }
 
-.main-img img{
-   /* Aumente o valor conforme necessário */
+.main-img img{  
   height: auto;
-  max-width: auto;
+  max-width: 100%;  
+}
+
+/* Responsivo */
+
+@media (max-width: 1000px){
+  main{
+    display: flex;
+    align-items: center;
+    align-self: center;
+  }
+  .main{    
+    grid-template-columns: 1fr;
+    gap: 0;    
+  }
+
+  .main-img{  
+    grid-row: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px){ 
+  .main-img{      
+    max-width: 250px;
+  }
+  .btn-trailer{
+    display: none; 
+  }
+  .main-title{
+    line-height: 3.69rem;
+    margin-bottom: 1.13rem;
+  }
   
 }

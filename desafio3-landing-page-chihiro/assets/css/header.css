@@ -10,5 +10,11 @@
   gap: 1.88rem;
 }
 
+@media (max-width: 1000px){
+  .header{    
+    padding-top: 1.56rem;
+    padding-bottom: 0;
+  }
+}
 
 

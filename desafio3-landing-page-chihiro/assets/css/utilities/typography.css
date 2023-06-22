@@ -37,5 +37,11 @@
   font-weight: 500;
 }
 
+/* Responsivo */
 
+@media (max-width: 600px){
+  .txt-lg{
+    font-size: 3.25rem;  
+  }
+}
 
