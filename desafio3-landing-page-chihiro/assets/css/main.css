@@ -1,3 +1,10 @@
+.main{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.25rem;
+  overflow-x: hidden;
+}
+
 .main-content{
   display: flex;
   flex-direction: column;
@@ -17,4 +24,43 @@
   line-height: 1.75rem; 
   margin-bottom: 3.75rem;
   letter-spacing: .05em;
+}
+.main-btns{
+  display: flex;
+  gap: 1.25rem;
+}
+
+.main-btn{
+  text-transform: uppercase;
+  width: 14.06rem;
+  height: 2.81rem;
+  transform: skew(-24deg);
+  border: none;
+}
+
+.main-btn span, .main-btn img{
+  transform: skew(24deg);
+}
+
+.btn-agora, .btn-trailer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-agora{
+  gap: .63rem;
+  background-color: var(--cor-1);
+}
+
+.btn-trailer{
+  background-color: transparent;
+  border: 2px solid var(--cor-1); 
+}
+
+.main-img img{
+   /* Aumente o valor conforme necessário */
+  height: auto;
+  max-width: auto;
+  
 }
